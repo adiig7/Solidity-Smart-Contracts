@@ -38,4 +38,5 @@ contract ELection{
         hasVoted[msg.sender] = true;
         emit electionUpdated(_id, candidates[_id].name, candidates[_id].voteCount);
     }
+    
 }
