@@ -21,7 +21,7 @@ interface ICryptoDevsNFT {
         view
         returns (uint256);
 }
-contract CryptoDevsDAO is Ownable {
+contract DaoContract is Ownable {
     struct Proposal {
     uint256 nftTokenId;
     uint256 deadline;
