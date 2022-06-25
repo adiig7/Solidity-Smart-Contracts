@@ -1,3 +1,6 @@
+// This smart contracts lets you whitelist a specified number of addresses.
+// Deployed to RINKEBY TESTNET: 0xddaAd340b0f1Ef65169Ae5E41A8b10776a75482d
+
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
