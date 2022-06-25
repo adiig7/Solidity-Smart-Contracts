@@ -1,3 +1,8 @@
+// Deployed to RINKEBY TESTNET: 0xD7ACd2a9FD159E69Bb102A1ca21C9a3e3A5F771B
+// FakeNFTMarketPlace RINKEBY: 0xd9145CCE52D386f254917e481eB44e9943F39138
+// NFT Collection RINKEBY: 0xE29c4Ea41944977eC82980D08dE82947d5bB117a
+
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -11,11 +16,8 @@ interface IFakeNFTMarketplace {
 }
 
 interface ICryptoDevsNFT {
-    // returns the number of NFTs owned by the given address
     function balanceOf(address owner) external view returns (uint256);
 
-    /// @dev tokenOfOwnerByIndex returns a tokenID at given index for owner
-    /// @param index - index of NFT in owned tokens array to fetch
     function tokenOfOwnerByIndex(address owner, uint256 index)
         external
         view
