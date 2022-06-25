@@ -1,3 +1,10 @@
+// ------------- @adiig7 -------------
+
+//Deployed to RINKEBY TESTNET - 0xd9145CCE52D386f254917e481eB44e9943F39138
+
+// This smart contract can be used to conduct an auction
+
+
 // SPDX-License-Identifier: MIT
 
 pragma solidity 0.8.13;
