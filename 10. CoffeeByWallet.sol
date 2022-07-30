@@ -25,25 +25,30 @@ contract  CoffeeByWallet {
         owner = payable(msg.sender);
     }
 
+    // function to gift 0.001 eth
     function BuyCoffee(string memory name, string memory message) public payable{
         require(msg.value > 0, "You can't donate 0!");
         gifts.push(Gift(block.timestamp, message, name, msg.sender));
         emit buyCoffee(msg.sender, name, message, block.timestamp);
     }
 
+    // function returns all the gifts that the deployer has get
     function getGifts() external view returns(Gift[] memory){
         return gifts;
     }
 
+    // this function transfers the balance from the smart contract to the deployer's wallet
     function withdraw() public{
         require(owner.send(address(this).balance));
     }
 
+    // This function lets only the owner of the contract to change the address of the account that receives the donated money
     function updateWithdrawAddress(address newOwner) public{
         require(owner == msg.sender, "Only owner can change the withdraw address");
         owner = payable(newOwner);
     }
-
+    
+    // function to gift 0.003 eth
     function buyLargeCoffee(string memory name, string memory message) public payable{
         require(msg.value >= 3000000000000000, "Amount is too low for large coffee!");
         gifts.push(Gift(block.timestamp, name, message, msg.sender));
